@@ -1,5 +1,5 @@
 from logger import log
-import csv, time, json
+import csv, time, json, socket
 from datetime import datetime
 
 __All__ = ('Parse')
@@ -7,7 +7,11 @@ __All__ = ('Parse')
 def Parse(filename):
 	reader = csv.reader(open(filename, 'r'), delimiter=',')		
 	headers = reader.next()[1:]
-	result = {}
+	r = {
+		'labname': socket.gethostname(),
+		'counters': {}
+	}
+	result = r['counters']
 	startValue = 'startValue'
 	maxValue = 'maxValue'
 	finishValue = 'finishValue'
@@ -40,5 +44,5 @@ def Parse(filename):
 				result[headers[index]][maxValue] = value
 			index += 1
 		startValueChecked = True
-	log.Debug(json.dumps(result, indent=4, sort_keys=True))
-	return result
+	log.Debug(json.dumps(r, indent=4, sort_keys=True))
+	return r

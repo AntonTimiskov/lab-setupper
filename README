@@ -4,41 +4,43 @@ python.exe labsetupper.py setup                         - Creating counters
 python.exe labsetupper.py teardown                      - Stopping counters and parsing results
 
 Output example:
-
 {
-    "\\\\AZTEC\\Process(pythonservice#1)\\Private Bytes": {
-        "finishValue": 27058176,
-        "maxValue": 165879808,
-        "startValue": 26722304
-    },
-    "\\\\AZTEC\\Process(pythonservice#2)\\Private Bytes": {
-        "finishValue": null,
-        "maxValue": null,
-        "startValue": null
-    },
-    "\\\\AZTEC\\Process(pythonservice)\\Private Bytes": {
-        "finishValue": 53194752,
-        "maxValue": 79511552,
-        "startValue": 51740672
-    },
-    "\\\\AZTEC\\Process(pythonw#1)\\Private Bytes": {
-        "finishValue": null,
-        "maxValue": 12804096,
-        "startValue": null
-    },
-    "\\\\AZTEC\\Process(pythonw#2)\\Private Bytes": {
-        "finishValue": null,
-        "maxValue": null,
-        "startValue": null
-    },
-    "\\\\AZTEC\\Process(pythonw#3)\\Private Bytes": {
-        "finishValue": null,
-        "maxValue": null,
-        "startValue": null
-    },
-    "\\\\AZTEC\\Process(pythonw)\\Private Bytes": {
-		"finishValue": null,
-		"maxValue": 78397440,
-		"startValue": null
-    }
+	"labname": "Aztec",
+	"counters": {
+		"\\\\AZTEC\\Process(pythonservice#1)\\Private Bytes": {
+		    "finishValue": 27058176,
+		    "maxValue": 165879808,
+		    "startValue": 26722304
+		},
+		"\\\\AZTEC\\Process(pythonservice#2)\\Private Bytes": {
+		    "finishValue": null,
+		    "maxValue": null,
+		    "startValue": null
+		},
+		"\\\\AZTEC\\Process(pythonservice)\\Private Bytes": {
+		    "finishValue": 53194752,
+		    "maxValue": 79511552,
+		    "startValue": 51740672
+		},
+		"\\\\AZTEC\\Process(pythonw#1)\\Private Bytes": {
+		    "finishValue": null,
+		    "maxValue": 12804096,
+		    "startValue": null
+		},
+		"\\\\AZTEC\\Process(pythonw#2)\\Private Bytes": {
+		    "finishValue": null,
+		    "maxValue": null,
+		    "startValue": null
+		},
+		"\\\\AZTEC\\Process(pythonw#3)\\Private Bytes": {
+		    "finishValue": null,
+		    "maxValue": null,
+		    "startValue": null
+		},
+		"\\\\AZTEC\\Process(pythonw)\\Private Bytes": {
+			"finishValue": null,
+			"maxValue": 78397440,
+			"startValue": null
+		}
+	}
 }
