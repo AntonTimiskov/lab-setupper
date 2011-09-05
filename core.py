@@ -1,6 +1,5 @@
 import os, sys, time, tempfile, re
 from logger import log
-import sync_utils
 
 _counter_name = 'SAIP'
 
