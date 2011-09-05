@@ -32,7 +32,7 @@ def createCounters(counter_name=_counter_name, counters=[], output=tempfile.mkst
 	
 	if not counters:
 		for i in range(5):
-			counters += ['"\\Process(http#%d)\\Private Bytes"' % i]
+			counters += ['"\\Process(httpd#%d)\\Private Bytes"' % i]
 			counters += ['"\\Process(pythonw#%d)\\Private Bytes"' % i]
 			counters += ['"\\Process(pythonservice#%d)\\Private Bytes"' % i]
 	cmd_line = "logman.exe create counter %(counter_name)s -c %(counters)s -o %(output)s -f %(format)s -si %(interval)s" % { 'counter_name': counter_name, 'counters': " ".join(counters), 'output': output, 'format': format, 'interval': interval }
