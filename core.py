@@ -56,8 +56,7 @@ def parseCountersFile(counter_name=_counter_name):
 	del m
 	import counter_parser
 	result = counter_parser.Parse(filename)
-	#os.remove( filename )
-	print filename
+	os.remove( filename )
 	return result
 	
 
